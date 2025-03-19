@@ -1,0 +1,36 @@
+exe,WARNING: Executable files may contain viruses!,Trojan.Win32.Emotet
+scr,WARNING: Screensaver files can execute malicious code!,Worm.Win32.Stuxnet
+bat,WARNING: Batch scripts can modify system settings!,Trojan.BAT.Gen
+vbs,WARNING: VBScript files can be used for malware execution!,VBS.LoveLetter
+cmd,WARNING: Command scripts may perform dangerous operations!,Trojan.Win32.Autoit
+js,WARNING: JavaScript files can execute unwanted scripts!,JS.Miner
+lnk,WARNING: Shortcut files can point to hidden malware!,LNK.Backdoor.Agent
+hta,WARNING: HTML applications can execute harmful scripts!,Trojan.HTML.Agent
+wsf,WARNING: Windows Script Files can execute dangerous commands!,WSF.Dropper.Gen
+ps1,WARNING: PowerShell scripts can modify system settings!,PS.Downloader.Agent
+jar,WARNING: Java Archive files can execute Java-based malware!,Trojan.Java.Agent
+iso,WARNING: Disc image files can contain malware-executing files!,ISO.Trojan.LokiBot
+msi,WARNING: Windows installer packages can install malicious software!,Trojan.MSI.Agent
+apk,WARNING: Android package files can install harmful applications!,Android.Trojan.Spy
+xll,WARNING: Excel add-ins can run malicious macros!,XLL.Malware.Gen
+ocx,WARNING: ActiveX controls can be exploited by malware!,Trojan.Ocx.Agent
+dll,WARNING: Dynamic link libraries can be injected into processes!,DLL.Injector
+sys,WARNING: System driver files can be used for rootkits!,Rootkit.Win32.Agent
+pdf,WARNING: PDFs can contain embedded scripts!,
+docx,WARNING: Malicious macros can be embedded in documents!,
+pptx,WARNING: PowerPoint files can contain hidden scripts!,
+xlsx,WARNING: Excel files can contain dangerous macros!,
+rtf,WARNING: Rich Text Format files can contain hidden exploits!,
+zip,WARNING: Compressed archives may hide dangerous files!,
+rar,WARNING: RAR archives can contain hidden malware!,
+7z,WARNING: 7z files may contain malicious executables!,
+iso,WARNING: ISO files can be used to bypass antivirus detection!,
+jpg,WARNING: Image files are generally safe but can be used for steganography!,
+png,WARNING: PNG images are generally safe but can hide data!,
+mp4,"WARNING: Media files are usually safe, but exploits exist!",
+mkv,WARNING: MKV files may contain embedded scripts in subtitles!,
+wav,"WARNING: Audio files are typically safe, but malware can be embedded!",
+svg,WARNING: SVG files can contain malicious JavaScript!,SVG.Exploit.Agent
+html,WARNING: HTML files can contain phishing scripts!,HTML.Phishing.Agent
+php,WARNING: PHP scripts can execute dangerous commands!,PHP.Backdoor.Agent
+asp,WARNING: ASP files can be used for web-based attacks!,ASP.Webshell.Agent
