@@ -39,3 +39,18 @@ The project integrates data from multiple high-quality sources to create a robus
 - [HackTheMatrix](https://hackthematrixforlife.wordpress.com/file-headers/ ) & [Gary Kessler’s Repository](https://www.garykessler.net/library/file_sigs.html): Offer detailed insights into file headers and signature bytes.
 - [TrID]( https://mark0.net/soft-trid-e.html): Supplies advanced binary signature identification techniques.
 - [VirusShare](https://virusshare.com/): Delivers real-world executable samples for testing the reliability of the method.
+
+## 🧠 Overview of Components
+
+1. ⚙️ main.cpp - Header Sorter & Virus Detector
+
+This C++ module processes two CSV files:
+- ```filenames.csv```: List of filenames and their header values.
+- ```virusenames.csv```: List of known malicious header patterns (signatures).
+
+📌 Features:
+- Sorts files based on header signatures.
+- Detects potential viruses by checking whether any known virus signature is present in the file header (case-insensitive substring match).
+- Displays a warning for any suspicious file.
+
+2. 🔍 pe_analyzer.py — PE File Header Analyzer
