@@ -54,3 +54,12 @@ This C++ module processes two CSV files:
 - Displays a warning for any suspicious file.
 
 2. 🔍 pe_analyzer.py — PE File Header Analyzer
+
+This module uses the pefile library to analyze PE file structure and detect signs of packing or obfuscation.
+
+📌 Features:
+- Detects number of sections, timestamp, image size, and entry point.
+
+- Calculates entropy of each section to detect signs of packing.
+
+- Raises alerts if the SizeOfImage is abnormally large or section entropy is high.
