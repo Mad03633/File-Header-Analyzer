@@ -14,7 +14,7 @@ export default function FileUploader({ setReport }) {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("http://192.168.0.13:8000/upload", formData);
+      const res = await axios.post("http://IP:PORT/upload", formData);
       setReport(res.data);
     } catch (err) {
       alert("Failed to analyze file.");
