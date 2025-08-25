@@ -2,3 +2,5 @@
 /frontend/node_modules
 /backend/.env
 /backend/cpp_analyzer
+/backend/__pycache__
+/.vscode
