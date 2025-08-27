@@ -25,15 +25,10 @@ Applications include digital forensics, malware detection, and data integrity ve
 
   - File header and MIME type data from:
 
-    - MDN Web Docs
-
-    - HackTheMatrix
-
-    - Gary Kessler’s Repository
-
-    - TrID
-
-    - Real-world malicious samples from VirusShare
+    - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types/Common_types): Provides comprehensive MIME type information.
+    - [HackTheMatrix](https://hackthematrixforlife.wordpress.com/file-headers/ ) & [Gary Kessler’s Repository](https://www.garykessler.net/library/file_sigs.html): Offer detailed insights into file headers and signature bytes.
+    - [TrID]( https://mark0.net/soft-trid-e.html): Supplies advanced binary signature identification techniques.
+    - [VirusShare](https://virusshare.com/): Delivers real-world executable samples for testing the reliability of the method.
 
 2. Database Integration
 
@@ -42,43 +37,65 @@ PostgreSQL backend with primary dataset, that was collected from above sources:
 
 3. Analytical Framework
 
-C++: High-performance header parsing and signature matching.
+  - **C++**: High-performance header parsing and signature matching.
 
-Python (FastAPI):
+  - **Python (FastAPI)**:
 
-File upload and orchestration.
+      - File upload and orchestration.
 
-Entropy calculation.
+      - Entropy calculation.
 
-Format validation.
+      - Format validation.
 
-VirusTotal integration.
+      - VirusTotal integration.
 
-React Frontend: User-friendly UI for uploading files and visualizing reports.
+  - **React Frontend**: User-friendly UI for uploading files and visualizing reports.
 
-## Methodology
+## System Components
 
-The project methodology is divided into the following key phases:
+[Architecture](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/architecture.jpg)
 
-1. Data Collection:
-- Aggregating header configuration data from reputable sources such as MDN Web Docs (for MIME types), HackTheMatrix (for file headers), Gary Kessler’s file signatures repository, and TrID.
-- Incorporating real-world executable samples from VirusShare to validate the approach.
+- **C++ Analyzer (cpp_analyzer)**
 
-2. Database Creation and Integration:
-- Building a PostgreSQL database populated with two primary datasets:
-  - filenames.csv: Combines file header information, MIME type mappings, and signature data.
-  - virusnames.csv: Contains metadata from executable samples to aid in malware detection.
+  - Parses binary headers from uploaded files.
 
-3. Analytical Framework:
-- Implementing a hybrid analysis approach that integrates:
-  - Statistical and textual analysis to extract distinctive header features.
-  - Visual analytics to enhance the interpretability of results.
-- Leveraging both Python (for flexible analysis and rapid prototyping) and C++ (for performance-critical operations).
+  - Matches against known signatures in PostgreSQL.
 
-## Data Sources and Integration
+  - Flags suspicious headers resembling known malware.
 
-The project integrates data from multiple high-quality sources to create a robust analytical framework:
-- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types/Common_types): Provides comprehensive MIME type information.
-- [HackTheMatrix](https://hackthematrixforlife.wordpress.com/file-headers/ ) & [Gary Kessler’s Repository](https://www.garykessler.net/library/file_sigs.html): Offer detailed insights into file headers and signature bytes.
-- [TrID]( https://mark0.net/soft-trid-e.html): Supplies advanced binary signature identification techniques.
-- [VirusShare](https://virusshare.com/): Delivers real-world executable samples for testing the reliability of the method.
+- **Python Analyzers**
+
+  - entropy_analyzer.py
+
+    - Calculates Shannon entropy.
+
+    - Flags files with abnormal randomness as potentially packed/obfuscated.
+
+  - signature_analyzer.py
+
+    - Compares binary header bytes to known file type signatures.
+
+    - Detects mismatches between extension and header.
+
+  - validator.py
+
+    - Validates structural integrity of common formats (PE, PDF, PNG, ZIP, ELF, MP3, etc.).
+
+    - Flags corrupted or fake files.
+
+  - virus_total_scanner.py
+
+    - Computes SHA256 hash.
+
+    - Submits file to VirusTotal API.
+
+    - Retrieves detection stats and permalink to full report.
+
+  - verdict_generator.py
+
+    - Aggregates results from all analyzers.
+
+    - Assigns final classification: Clean, Suspicious, or Malicious.
+
+## Example Output
+
