@@ -53,7 +53,7 @@ PostgreSQL backend with primary dataset, that was collected from above sources:
 
 ## System Components
 
-(https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/architecture.jpg)
+![Architecture](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/architecture.jpg)
 
 - **C++ Analyzer (cpp_analyzer)**
 
