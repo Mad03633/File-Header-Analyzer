@@ -25,35 +25,31 @@ Applications include digital forensics, malware detection, and data integrity ve
 
   - File header and MIME type data from:
 
-    - MDN Web Docs
-
-    - HackTheMatrix
-
-    - Gary Kessler’s Repository
-
-    - TrID
-
-    - Real-world malicious samples from VirusShare
+    - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types/Common_types): Provides comprehensive MIME type information.
+    - [HackTheMatrix](https://hackthematrixforlife.wordpress.com/file-headers/ ) & [Gary Kessler’s Repository](https://www.garykessler.net/library/file_sigs.html): Offer detailed insights into file headers and signature bytes.
+    - [TrID]( https://mark0.net/soft-trid-e.html): Supplies advanced binary signature identification techniques.
+    - [VirusShare](https://virusshare.com/): Delivers real-world executable samples for testing the reliability of the method.
 
 2. Database Integration
 
-PostgreSQL backend with two primary datasets:
+PostgreSQL backend with primary dataset, that was collected from above sources:
+[](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/DB.jpg)
 
 3. Analytical Framework
 
-C++: High-performance header parsing and signature matching.
+  - **C++**: High-performance header parsing and signature matching.
 
-Python (FastAPI):
+  - **Python (FastAPI)**:
 
-File upload and orchestration.
+      - File upload and orchestration.
 
-Entropy calculation.
+      - Entropy calculation.
 
-Format validation.
+      - Format validation.
 
-VirusTotal integration.
+      - VirusTotal integration.
 
-React Frontend: User-friendly UI for uploading files and visualizing reports.
+  - **React Frontend**: User-friendly UI for uploading files and visualizing reports.
 
 ## Methodology
 
@@ -81,27 +77,3 @@ The project integrates data from multiple high-quality sources to create a robus
 - [HackTheMatrix](https://hackthematrixforlife.wordpress.com/file-headers/ ) & [Gary Kessler’s Repository](https://www.garykessler.net/library/file_sigs.html): Offer detailed insights into file headers and signature bytes.
 - [TrID]( https://mark0.net/soft-trid-e.html): Supplies advanced binary signature identification techniques.
 - [VirusShare](https://virusshare.com/): Delivers real-world executable samples for testing the reliability of the method.
-
-## 🧠 Overview of Components
-
-1. ⚙️ main.cpp - Header Sorter & Virus Detector
-
-This C++ module processes two CSV files:
-- ```filenames.csv```: List of filenames and their header values.
-- ```virusenames.csv```: List of known malicious header patterns (signatures).
-
-📌 Features:
-- Sorts files based on header signatures.
-- Detects potential viruses by checking whether any known virus signature is present in the file header (case-insensitive substring match).
-- Displays a warning for any suspicious file.
-
-2. 🔍 pe_analyzer.py — PE File Header Analyzer
-
-This module uses the pefile library to analyze PE file structure and detect signs of packing or obfuscation.
-
-📌 Features:
-- Detects number of sections, timestamp, image size, and entry point.
-
-- Calculates entropy of each section to detect signs of packing.
-
-- Raises alerts if the SizeOfImage is abnormally large or section entropy is high.
