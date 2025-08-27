@@ -7,11 +7,53 @@
 
 ## Overview
 
-This diploma project proposes a novel method for file type identification that leverages intrinsic header configuration data rather than relying solely on file extensions or metadata. The approach is designed to enhance digital forensic investigations, malware detection, and data integrity verification by:
+This diploma project introduces a hybrid framework for file type identification and security analysis.
+Unlike traditional methods that depend on file extensions or metadata (which are easily manipulated), our approach relies on intrinsic header configuration data and combines:
 
-- Extracting distinctive header properties (e.g., magic numbers, signature bytes) to accurately determine file types.
-- Combining multiple analytical paradigms (statistical, textual, and visual) to increase robustness.
-- Mitigating common vulnerabilities in traditional methods that rely on easily manipulated file attributes.
+  - Signature-based identification (magic numbers, file headers).
+
+  - Statistical entropy analysis to detect obfuscation/packing.
+
+  - Structural validation against known format specifications.
+
+  - Threat intelligence integration with VirusTotal for malware scanning.
+
+Applications include digital forensics, malware detection, and data integrity verification.
+
+## 🔬 Methodology
+1. Data Collection
+
+  - File header and MIME type data from:
+
+    - MDN Web Docs
+
+    - HackTheMatrix
+
+    - Gary Kessler’s Repository
+
+    - TrID
+
+    - Real-world malicious samples from VirusShare
+
+2. Database Integration
+
+PostgreSQL backend with two primary datasets:
+
+3. Analytical Framework
+
+C++: High-performance header parsing and signature matching.
+
+Python (FastAPI):
+
+File upload and orchestration.
+
+Entropy calculation.
+
+Format validation.
+
+VirusTotal integration.
+
+React Frontend: User-friendly UI for uploading files and visualizing reports.
 
 ## Methodology
 
