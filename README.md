@@ -37,7 +37,8 @@ Applications include digital forensics, malware detection, and data integrity ve
 
 2. Database Integration
 
-PostgreSQL backend with two primary datasets:
+PostgreSQL backend with primary dataset, that was collected from above sources:
+[](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/DB.jpg)
 
 3. Analytical Framework
 
