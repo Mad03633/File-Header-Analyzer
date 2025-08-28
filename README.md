@@ -99,3 +99,9 @@ PostgreSQL backend with primary dataset, that was collected from above sources:
 
 ## Example Output
 
+### Clean file
+
+Checking the content of the file.
+
+![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/cat_safe_file.jpg)
+
