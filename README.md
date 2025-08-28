@@ -105,3 +105,8 @@ Checking the content of the file.
 
 ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/cat_safe_file.jpg)
 
+- Result:
+  - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/safe_file_1.jpg)
+  - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/safe_file_2.jpg)
+  - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/safe_file_3.jpg)
+  - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/safe_file_4.jpg)
