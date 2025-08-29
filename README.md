@@ -110,3 +110,11 @@ Checking the content of the file.
   - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/safe_file_2.jpg)
   - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/safe_file_3.jpg)
   - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/safe_file_4.jpg)
+
+### Suspicious file
+The file is actually infected and masquerated.
+- Result: 
+  - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/masquerated_1.jpg)
+  - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/masquerated_2.jpg)
+  - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/masquerated_3.jpg)
+  - ![](https://github.com/Mad03633/File-Header-Analyzer/blob/main/assets/masquerated_4.jpg)
